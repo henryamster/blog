@@ -37,6 +37,9 @@ img{
     max-width: 600px;
     width:auto;
     height:auto;
+    margin-top:5vh;
+    margin-bottom:5vh;
+     box-shadow: rgba(0,0,0,0.2) 2px 2px;
 }
 
 nav li a{
@@ -102,28 +105,50 @@ textarea {
 
 article{
     text-align:center;
+    margin-top:10vh;
+    padding-bottom:10vh;
+}
+article:nth-of-type(2) {
+    background: rgb(145,145,145);
 }
 
 .title{
+    padding-left:4vw;
     color:white;
-    font-size:3vh;
-    font-variant: small-caps;
+    font-size:6vh;
     margin: 0px;
+    padding-bottom:2vh;
+    padding-top:2vh;
+    background:rgb(55,55,55);
+    text-shadow: black 2px 2px;
+}
+.title::first-letter { 
+   color:rgb(135,211,211);
 }
 .date{
     margin:0;
     font-size:12px;
     font-style:italic;
+     background:rgb(95,95,95);
 }
 .content{
+    padding-top:5vh;
+    padding-bottom:5vh;
     margin:0;
+    width:50vw;
+    margin-left:25vw;
+    background:rgba(255,255,255,0.3);
+    border-radius:15px;
+    box-shadow: rgba(0,0,0,0.2) 2px 2px;
 }
+
 @media only screen and (max-width: 767px) { 
     img{
     
     width:auto;
     max-width: 300px;
     height:auto;
+    
 }
  nav{
      padding:0;

@@ -51,7 +51,7 @@ var titleNode = document.createElement("h3");
 var dateNode = document.createElement("p");
   dateNode.className = "date";
   var d = new Date(snapshot.date);
-  var dateTextNode = document.createTextNode(d.toUTCString());
+  var dateTextNode = document.createTextNode(d.toLocaleDateString("en-US") + d.toLocaleTimeString("en-us"));
   dateNode.appendChild(dateTextNode);
   if (snapshot.file.length >0){
 var imageNode = document.createElement("img");
