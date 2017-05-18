@@ -48,6 +48,11 @@ var titleNode = document.createElement("h3");
   titleNode.className = "title";
   var titleTextNode = document.createTextNode(snapshot.title);         
   titleNode.appendChild(titleTextNode);     
+var dateNode = document.createElement("p");
+  dateNode.className = "date";
+  var d = new Date(snapshot.date);
+  var dateTextNode = document.createTextNode(d.toUTCString());
+  dateNode.appendChild(dateTextNode);
   if (snapshot.file.length >0){
 var imageNode = document.createElement("img");
   imageNode.src = snapshot.file;}
@@ -56,8 +61,10 @@ var contentNode = document.createElement("p");
   var contentTextNode = document.createTextNode(snapshot.content);
   contentNode.appendChild(contentTextNode);
   artic.appendChild(titleNode);
+  artic.appendChild(dateNode)
   if (snapshot.file.length >0){artic.appendChild(imageNode);}
   artic.appendChild(contentNode);
+  
   
   art.appendChild(artic);
 }}
