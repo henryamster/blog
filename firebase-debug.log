@@ -1,47 +1,25 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      /home/ubuntu/.nvm/versions/node/v4.7.3/bin/node /home/ubuntu/.nvm/versions/node/v4.7.3/bin/firebase deploy -p client
+[debug] Command:      /home/ubuntu/.nvm/versions/node/v4.7.3/bin/node /home/ubuntu/.nvm/versions/node/v4.7.3/bin/firebase deploy
 [debug] CLI Version:  3.8.0
 [debug] Platform:     linux
 [debug] Node Version: v4.7.3
-[debug] Time:         Thu May 18 2017 03:51:19 GMT+0000 (UTC)
+[debug] Time:         Thu May 18 2017 05:15:40 GMT+0000 (UTC)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/paOO3WFVPxdn9SFIV5UTmMUHSkZPRoomSX_FBAefdJbtXBT44Gl5shelmLRFDPw6',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 18 2017 05:15:40 GMT+0000 (UTC)
+[debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/blog-b77f8  
- Thu May 18 2017 03:51:19 GMT+0000 (UTC)
+ Thu May 18 2017 05:15:40 GMT+0000 (UTC)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/blog-b77f8/tokens  
- Thu May 18 2017 03:51:19 GMT+0000 (UTC)
-[debug] <<< HTTP RESPONSE 200
-[info] 
-[info] === Deploying to 'blog-b77f8'...
-[info] 
-[debug] TypeError: targetNames.join is not a function
-    at deploy (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/lib/deploy/index.js:68:57)
-    at null._action (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/commands/deploy.js:47:12)
-    at /home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/lib/command.js:176:29
-    at tryCatch (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:539:12)
-    at invokeCallback (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:554:13)
-    at publish (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:522:7)
-    at flush (/home/ubuntu/.nvm/versions/node/v4.7.3/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:2414:5)
-    at nextTickCallbackWith0Args (node.js:436:9)
-    at process._tickCallback (node.js:365:13)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] ----------------------------------------------------------------------
-[debug] Command:      /home/ubuntu/.nvm/versions/node/v4.7.3/bin/node /home/ubuntu/.nvm/versions/node/v4.7.3/bin/firebase deploy -p client
-[debug] CLI Version:  3.8.0
-[debug] Platform:     linux
-[debug] Node Version: v4.7.3
-[debug] Time:         Thu May 18 2017 03:53:28 GMT+0000 (UTC)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/blog-b77f8  
- Thu May 18 2017 03:53:28 GMT+0000 (UTC)
-[debug] <<< HTTP RESPONSE 200
-[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/blog-b77f8/tokens  
- Thu May 18 2017 03:53:28 GMT+0000 (UTC)
+ Thu May 18 2017 05:15:41 GMT+0000 (UTC)
 [debug] <<< HTTP RESPONSE 200
 [info] 
 [info] === Deploying to 'blog-b77f8'...

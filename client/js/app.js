@@ -12,7 +12,9 @@
   };
   firebase.initializeApp(config);
   
+  var provider = new firebase.auth.GoogleAuthProvider();
   
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   
   //comparative date reference
   var now = Date.now();
@@ -84,6 +86,20 @@ console.log(prop);
  //new submit function
  function submitBlogPost(){
   
+  var email = "henryamsterfritz@gmail.com";
+  var password = document.getElementById("password");
+  var pw = password.value;
+  
+  firebase.auth().signInWithEmailAndPassword(email, pw).catch(function(error) {
+   
+  var errorCode = error.code;
+  var errorMessage = error.message;
+});
+
+var user = firebase.auth().currentUser;
+
+
+if (user) {
    var title = document.getElementById("title");
   var content = document.getElementById("content");
   var file= document.getElementById("file");
@@ -102,7 +118,14 @@ console.log(prop);
   updates['blogposts/' + newBlogKey] = blogPost;
   //return updates to database
   return firebase.database().ref().update(updates);
- }
+}
+else{
+ var t = document.getElementsByTagName("h1");
+  t.innerHtml= "ERROR";
+}
+ 
+  
+}
  
 
 
