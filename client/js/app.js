@@ -12,14 +12,30 @@
   };
   firebase.initializeApp(config);
   
-  //var title = document.getElementById("title").value;
-  //var content = document.getElementById("content").value;
+  
+  
   //var dbRef = firebase.database().ref().child('blogposts');
- // var dbRef2 = firebase.database().ref().child('content');
   //dbRef.on('value', snap => title.innerText = snap.val());
-  //dbRef2.on('value', snap => content.innerText = snap.val());
+  
+  var postsRef = firebase.database().ref('blogposts/').orderByChild('date').limitToFirst(12);
+ // forEach(post in postsRef)
+  
+postsRef.on('value', function(snapshot) {
+  poster(snapshot.val())});
+  
+function poster(snapshot){
+   console.log(snapshot);
+   var art = document.getElementById("art");
+   var titleNode = document.createElement("h3").className = "title";                 // Create a <li> node
+var titleTextNode = document.createTextNode(snapshot.children.title);         // Create a text node
+titleNode.appendChild(titleTextNode);                              // Append the text to <li>
+art.appendChild(titleNode);
+};
+
+  
+  
+  
   var submitBtn = document.getElementById("submit");
- // var file= document.getElementById("file").value;
  if (submitBtn)
  {submitBtn.addEventListener("click", function(){submitBlogPost()});
  }
