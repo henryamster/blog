@@ -32,7 +32,12 @@ nav li{
      text-align: center;
      margin:2vw;
 }
-
+img{
+    max-height: 600px;
+    max-width: 600px;
+    width:auto;
+    height:auto;
+}
 
 nav li a{
    
@@ -61,12 +66,7 @@ footer li a{
 section{
     min-height: 100vh;
 }
-img{
-    max-height: 600px;
-    max-width: 400px;
-    width:auto;
-    height:auto;
-}
+
 .flexbox-container {
 	display: -ms-flex;
 	display: -webkit-flex;
@@ -93,10 +93,38 @@ img{
     width:70vw;
    margin-left:15vw;
 }
+label{
+    margin-left:15vw;
+}
 textarea {
     height:60vh;
 }
+
+article{
+    text-align:center;
+}
+
+.title{
+    color:white;
+    font-size:3vh;
+    font-variant: small-caps;
+    margin: 0px;
+}
+.date{
+    margin:0;
+    font-size:12px;
+    font-style:italic;
+}
+.content{
+    margin:0;
+}
 @media only screen and (max-width: 767px) { 
+    img{
+    
+    width:auto;
+    max-width: 300px;
+    height:auto;
+}
  nav{
      padding:0;
  }
@@ -126,5 +154,12 @@ textarea {
     width:80vw;
     margin-left:10vw;
 }
+    label{
+         margin-left:10vw;
+    }
     
+    article{
+    text-align:center;
+    
+}
 }

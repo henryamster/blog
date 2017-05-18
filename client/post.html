@@ -26,10 +26,10 @@
     </nav>
     <section>
       <form>
-          <input class="formControl" type="text" name="title" id="title"/>
-          <input class="formControl" type="file" name="file" id="file"/>
-          <textarea class="formControl" id="content" rows="4" cols="50"></textarea>
-          <input class="formControl" type="submit" id="submit" value="Submit" onclick="submitBlogPost(title, content, file)"/>
+          <label for="title">Title:</label><input class="formControl" type="text" name="title" id="title"/>
+          <label for="link">Link:</label><input class="formControl" type="text" name="file" id="file"/>
+          <label for="content">Content</label><textarea class="formControl" id="content" rows="4" cols="50"></textarea>
+          <input class="formControl" type="submit" id="submit" value="Submit" />
       </form>
     </section>
     <footer>
