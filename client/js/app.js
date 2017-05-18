@@ -17,21 +17,54 @@
   //var dbRef = firebase.database().ref().child('blogposts');
   //dbRef.on('value', snap => title.innerText = snap.val());
   
+  //reference for blogposts
   var postsRef = firebase.database().ref('blogposts/').orderByChild('date').limitToFirst(12);
- // forEach(post in postsRef)
+
+
+  //load blogposts
+postsRef.once('value', function(snapshot) {
+  postLoader(snapshot.val())});
   
-postsRef.on('value', function(snapshot) {
-  poster(snapshot.val())});
-  
-function poster(snapshot){
-   console.log(snapshot);
-   var art = document.getElementById("art");
-   var titleNode = document.createElement("h3").className = "title";                 // Create a <li> node
-var titleTextNode = document.createTextNode(snapshot.children.title);         // Create a text node
-titleNode.appendChild(titleTextNode);                              // Append the text to <li>
-art.appendChild(titleNode);
+function postLoader(snapshot){
+   //load up each individual blogpost
+   for (var prop in snapshot) {
+    var propRef = firebase.database().ref('blogposts/' + prop);
+    
+    
+    propRef.once('value', function(snapshot){
+     poster(snapshot.val())})
+   
+}
 };
 
+function poster(snapshot){
+ if (document.getElementById("art")){
+ //locate article, append content
+var art = document.getElementById("art");
+//create article
+var artic = document.createElement("article");
+
+var titleNode = document.createElement("h3");  
+  titleNode.className = "title";
+  var titleTextNode = document.createTextNode(snapshot.title);         
+  titleNode.appendChild(titleTextNode);     
+  if (snapshot.file.length >0){
+var imageNode = document.createElement("img");
+  imageNode.src = snapshot.file;}
+var contentNode = document.createElement("p");
+  contentNode.className = "content";
+  var contentTextNode = document.createTextNode(snapshot.content);
+  contentNode.appendChild(contentTextNode);
+  artic.appendChild(titleNode);
+  if (snapshot.file.length >0){artic.appendChild(imageNode);}
+  artic.appendChild(contentNode);
+  
+  art.appendChild(artic);
+}}
+/*
+console.log(prop);
+    console.log(propRef);
+    */
   
   
   
