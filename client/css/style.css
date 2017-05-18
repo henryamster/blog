@@ -13,6 +13,7 @@ header{
 header h1{
      text-align:center;
      margin:0px;
+     font-size:14vh;
 }
 header h2{
     font-size:12px;
@@ -98,6 +99,7 @@ section{
 }
 label{
     margin-left:15vw;
+    font-size:30px;
 }
 textarea {
     height:60vh;
@@ -189,6 +191,7 @@ article:nth-of-type(2) {
     
 }
 #cpy{
-    text-align:center;
+    text-align:left;
+    margin-left:50px;
 }
 }

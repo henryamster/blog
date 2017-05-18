@@ -14,9 +14,8 @@
   
   
   
-  //var dbRef = firebase.database().ref().child('blogposts');
-  //dbRef.on('value', snap => title.innerText = snap.val());
-  
+  //comparative date reference
+  var now = Date.now();
   //reference for blogposts
   var postsRef = firebase.database().ref('blogposts/').orderByChild('date').limitToFirst(12);
 
